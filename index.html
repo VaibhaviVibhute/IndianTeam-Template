@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Team</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    main{
+        height: 1250px;
+        width: 1100px;
+        border: 1px solid black;
+        margin: 0 auto;
+        background-image: url(./bcci-logo.15.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: sticky;
+        /* position: fixed; */
+        
+    }
+    #box{
+        height: 1250px;
+        width: 1100px;
+        border: 1px solid white;
+        background-color: rgba(255, 255, 255, .50); 
+        display: flex;  
+        position:sticky; 
+        /* background-attachment: fixed; */
+        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
+        justify-content: space-around;
+    }
+    .parent{
+        height: 300px;
+        width: 250px;
+        /* border: 1px solid black; */
+        /* position: fixed; */
+        display: flex;
+        justify-content: center;
+    }
+    .cir{
+        height: 150px;
+        width: 150px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+        /* background-color: aqua; */
+        background-position: center;
+        background-size: cover;
+    }
+    .box1{
+        height: 200px;
+        width: 250px;
+        border: 1px solid black;
+        /* background-color: blue; */
+        position: absolute;
+        margin-top: 100px;
+        z-index: -1;
+        border-radius: 25px;
+    } 
+    .text{
+        height: 50px;
+        width: 250px;
+        /* border: 1px solid black; */
+        
+    }
+    #tx9{
+        color: black;
+        font-weight: 800;
+        font-size: 18px;
+        padding: 13px 55px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    #cir9{
+        background-image: url(./Rohit\ sharma.jpg);
+    }
+    #cir10{
+        background-image: url(./Virat\ kohli.jpg);
+    }
+    #tx10{
+        color: black;
+        font-weight: 800;
+        font-size: 18px;
+        padding: 13px 70px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #cir11{
+        background-image: url(./KL\ rahul.jpg);
+    }
+    #tx11{
+        color: black;
+        font-weight: 800;
+        font-size: 18px;
+        padding: 13px 55px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #cir12{
+        background-image: url(./Hardik\ pandya.jpg);
+    }
+    #tx12{
+        color: black;
+        font-weight: 800;
+        font-size: 18px;
+        padding: 13px 50px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #cir8{
+        background-image: url(./Ishan\ Kishan.jpg);
+    }
+    #tx8{
+        color: black;
+        font-weight: 800;
+        font-size: 18px;
+        padding: 13px 55px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #cir5{
+        background-image: url(./jasprit\ bumarah.jpg);
+    }
+    #tx5{
+        color: black;
+        font-weight: 800;
+        font-size: 18px;
+        padding: 13px 40px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #cir6{
+        background-image: url(./Ravichandran\ Ashwin.jpg);
+    }
+    #tx6{
+        color: black;
+        font-weight: 800;
+        font-size: 18px;
+        padding: 13px 12px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #cir7{
+        background-image: url(./mohammed\ shami.jpg);
+    }
+    #tx7{
+        color: black;
+        font-weight: 800;
+        font-size: 18px;
+        padding: 13px 30px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #cir1{
+        background-image: url(./Axar\ Patel.jpg);
+    }
+    #tx1{
+        color: black;
+        font-weight: 800;
+        font-size: 18px;
+        padding: 13px 70px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #cir2{
+        background-image: url(./Shreyas\ iyer.jpg);
+    }
+    #tx2{
+        color: black;
+        font-weight: 800;
+        font-size: 18px;
+        padding: 13px 60px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #cir3{
+        background-image: url(./Suryakumar\ yadav.jpg);
+    }
+    #tx3{
+        color: black;
+        font-weight: 800;
+        font-size: 18px;
+        padding: 13px 25px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #cir4{
+        background-image: url(./Rishabh\ pant.jpg);
+    }
+    #tx4{
+        color: black;
+        font-weight: 800;
+        font-size: 18px;
+        padding: 13px 50px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    /* hover */
+    .cir:hover{
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+    }
+    .parent:hover{
+        border-radius: 15px;
+        box-shadow: 4px 4px 8px black;
+    }
+    /* details */
+    .info{
+        height: 140px;
+        width: 250px;
+        /* border: 1px solid black; */
+        margin-top: 50px;
+    }
+    .con{
+        height: 85px;
+        width: 250px;
+        /* border: 1px solid black; */
+        margin-top: 3px;
+        display: flex; 
+        flex-wrap: wrap; 
+        
+    }
+    .r1{
+        height: 30px;
+        width: 82px;
+        border: 1px solid;
+        background-color: rgb(115, 144, 115);
+        color: aliceblue;
+        display: inline-block;
+        margin-top: 5px;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        margin-left: 0px;
+    }
+    .r2{
+        height: 30px;
+        width: 82px;
+        border: 1px solid;
+        display: inline-block;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    /* heading */
+    #head{
+        height: 60px;
+        width: 1100px;
+        border: 1px solid black;
+        margin: 0 auto;
+        background-color: darkgray;
+    }
+    #con3{
+        height: 55px;
+        width: 1090px;
+        /* border: 1px solid black; */
+        margin: 0 auto;
+        margin-top: 1px;
+        display: flex;
+        /* flex-wrap: wrap; */
+        justify-content: space-between;
+    }
+
+    /* icons */
+    #ic1{
+        height: 50px;
+        width: 80px;
+        /* border: 1px solid black; */
+        background-image: url(./india-g9786ce4c6_640.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-left: 2px;
+    }
+    #title{
+        height: 50px;
+        width: 400px;
+        /* border: 1px solid black;  */
+        margin-top: 2px;
+        text-align: center;
+    }
+    #ic2{
+        height: 50px;
+        width: 90px;
+        /* border: 1px solid black; */
+        background-image: url(./batsman-playing-cricket-cricket-competition-logo-stylized-cricketer-character-for-website-design-free-vector.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+</style>
+<body>
+    <div id="head">
+        <div id="con3">
+            <div id="ic1"></div>
+            <div id="title"><h1>Indian Cricket Team</h1></div>
+            <div id="ic2"></div>
+        </div>
+    </div>
+    <main>
+        <div id="box">
+            <div class="parent" id="p1">
+                <div id="cir1" class="cir">
+                <div class="box1">
+                    <div id="info1" class="info">
+                        <div class="text" id="tx1">Axar Patel</div>
+                        <div class="con">
+                            <div class="r1">ODI</div>
+                            <div class="r1">TEST</div>
+                            <div class="r1">T20Is</div>
+                            <div class="r2">49</div>
+                            <div class="r2">10</div>
+                            <div class="r2">40</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="parent" id="p2">
+                <div id="cir2" class="cir">
+                <div class="box1">
+                    <div class="info" id="info2">
+                        <div class="text" id="tx2">Shreyas Iyer</div>
+                        <div class="con">
+                            <div class="r1">ODI</div>
+                            <div class="r1">TEST</div>
+                            <div class="r1">T20Is</div>
+                            <div class="r2">42</div>
+                            <div class="r2">8</div>
+                            <div class="r2">49</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="parent" id="p3">
+                <div id="cir3" class="cir">
+                <div class="box1">
+                    <div class="info" id="info3">
+                        <div class="text" id="tx3">Suryakumar Yadav</div>
+                        <div class="con">
+                            <div class="r1">ODI</div>
+                            <div class="r1">TEST</div>
+                            <div class="r1">T20Is</div>
+                            <div class="r2">20</div>
+                            <div class="r2">1</div>
+                            <div class="r2">48</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="parent" id="p4">
+                <div id="cir4" class="cir">
+                <div class="box1">
+                    <div class="info" id="info4">
+                        <div class="text" id="tx4">Rishabh Pant</div>
+                        <div class="con">
+                            <div class="r1">ODI</div>
+                            <div class="r1">TEST</div>
+                            <div class="r1">T20Is</div>
+                            <div class="r2">30</div>
+                            <div class="r2">33</div>
+                            <div class="r2">66</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="parent" id="p5">
+                <div id="cir5" class="cir">
+                <div class="box1">
+                    <div class="info" id="info5">
+                        <div class="text" id="tx5">Jasprit Bumarah</div>
+                        <div class="con">
+                            <div class="r1">ODI</div>
+                            <div class="r1">TEST</div>
+                            <div class="r1">T20Is</div>
+                            <div class="r2">72</div>
+                            <div class="r2">30</div>
+                            <div class="r2">60</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="parent" id="p6">
+                <div id="cir6" class="cir">
+                <div class="box1">
+                    <div class="info" id="info6">
+                        <div class="text" id="tx6">Ravichandran Ashwin</div>
+                        <div class="con">
+                            <div class="r1">ODI</div>
+                            <div class="r1">TEST</div>
+                            <div class="r1">T20Is</div>
+                            <div class="r2">113</div>
+                            <div class="r2">90</div>
+                            <div class="r2">65</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="parent" id="p7">
+                <div id="cir7" class="cir">
+                <div class="box1">
+                    <div class="info" id="info7">
+                        <div class="text" id="tx7">Mohammed Shami</div>
+                        <div class="con">
+                            <div class="r1">ODI</div>
+                            <div class="r1">TEST</div>
+                            <div class="r1">T20Is</div>
+                            <div class="r2">87</div>
+                            <div class="r2">62</div>
+                            <div class="r2">23</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="parent" id="p8">
+                <div id="cir8" class="cir">
+                <div class="box1">
+                    <div class="info" id="info8">
+                        <div class="text" id="tx8">Ishan Kishan</div>
+                        <div class="con">
+                            <div class="r1">ODI</div>
+                            <div class="r1">T20</div>
+                            <div class="r1">T20Is</div>
+                            <div class="r2">48</div>
+                            <div class="r2">151</div>
+                            <div class="r2">48</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="parent" id="p9">
+                <div id="cir9" class="cir">
+                <div class="box1">
+                    <div class="info" id="info9">
+                        <div class="text" id="tx9">Rohit sharma</div>
+                        <div class="con">
+                            <div class="r1">ODI</div>
+                            <div class="r1">TEST</div>
+                            <div class="r1">T20Is</div>
+                            <div class="r2">241</div>
+                            <div class="r2">47</div>
+                            <div class="r2">148</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="parent" id="p10">
+                <div id="cir10" class="cir">
+                <div class="box1">
+                    <div class="info" id="info10">
+                        <div class="text" id="tx10">Virat Kohli</div>
+                        <div class="con">
+                            <div class="r1">ODI</div>
+                            <div class="r1">TEST</div>
+                            <div class="r1">T20Is</div>
+                            <div class="r2">271</div>
+                            <div class="r2">106</div>
+                            <div class="r2">115</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="parent" id="p11">
+                <div id="cir11" class="cir">
+                <div class="box1">
+                    <div class="info" id="info11">
+                        <div class="text" id="tx11">Lokesh Rahul</div>
+                        <div class="con">
+                            <div class="r1">ODI</div>
+                            <div class="r1">TEST</div>
+                            <div class="r1">T20Is</div>
+                            <div class="r2">51</div>
+                            <div class="r2">47</div>
+                            <div class="r2">72</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="parent" id="p12">
+                <div id="cir12" class="cir">
+                <div class="box1">
+                    <div class="info" id="info12">
+                        <div class="text" id="tx12">Hardik Pandya</div>
+                        <div class="con">
+                            <div class="r1">ODI</div>
+                            <div class="r1">TEST</div>
+                            <div class="r1">T20Is</div>
+                            <div class="r2">71</div>
+                            <div class="r2">11</div>
+                            <div class="r2">87</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
